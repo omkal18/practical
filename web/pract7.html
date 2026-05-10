@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Manipulation</title>
+    <script>
+        function changecontent(){
+            let name=document.querySelector("#name").value;
+
+        if(name=="")
+        {
+            alert("enter your name properly.");
+            return;
+        }
+        let result=document.querySelector("#result");
+        result.innerHTML="Welcome "+ name +" to Web Devlopement.";
+        }
+        
+
+    </script>
+</head>
+<body>
+    <h1>Dom Manipulation Example</h1>
+    <hr>
+    <p>
+        Enter your Name:
+        <input type="text" id="name">
+    </p>
+    <button onclick="changecontent()">Click here</button>
+    <hr>
+    <h2 id="result">Result will appear here</h2>
+</body>
+</html>

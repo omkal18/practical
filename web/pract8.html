@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <script>
+        function calculate(){
+            let num1=parseFloat(document.querySelector("#number1").value);
+            let num2=parseFloat(document.querySelector("#number2").value);
+            let operator=document.querySelector("#operator").value;
+            let result;
+
+            switch(operator){
+                case "+":
+                    result=num1+num2;
+                    break;
+                case "-":
+                    result=num1-num2;
+                    break;
+                case "*":
+                    result=num1*num2;
+                    break;
+                case "/":
+                    if(num2 == 0){
+                        result = "Cannot divide by zero";
+                    }
+                    else{
+                        result = num1 / num2;
+                    }
+                    break;
+
+                default:
+                    result="Invalid Operator"; 
+            }
+            document.querySelector("#result").innerHTML="Result="+result;
+        }
+    </script>
+</head>
+<body>
+    <h1>Simple Calculator</h1>
+    <p>
+        Enter first number:
+        <input type="number" id="number1">
+    </p>
+     <p>
+        Enter second number:
+        <input type="number" id="number2">
+    </p>
+    <p>
+        select operator:
+        <select  id="operator">
+            <option value="+">Addition(+)</option>
+            <option value="-">Substraction(-)</option>
+            <option value="*">Multiplication(*)</option>
+            <option value="/">Division(/)</option>
+        </select>
+    </p>
+    <button onclick="calculate()">Calculate</button>
+    <hr>
+    <h3 id="result">result will disapear here</h3>
+</body>
+</html>
