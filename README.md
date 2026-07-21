@@ -1,5 +1,7 @@
 location = "A"
+
 roomA = "Dirty"
+
 roomB = "Dirty"
 
 for step in range(1, 7):
